@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="initial-scale=1.0,width=device-width" name="viewport">
+
+	<title>ixp2.yh</title>
+
+	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="MyWebSite" />
+<link rel="manifest" href="/site.webmanifest" />
+
+	<link href="css/reset.css" rel="stylesheet" type="text/css">
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<main class="layout">
+
+		<aside class="timeline">
+			<header class="site-header">
+				<span class="site-title">IXP2.YOUNHEE</span>
+			</header>
+			<ol class="timeline__list">
+				<li class="timeline__item" data-index="0">1</li>
+				<li class="timeline__item" data-index="1">2</li>
+				<li class="timeline__item" data-index="2">3</li>
+				<li class="timeline__item" data-index="3">4</li>
+				<li class="timeline__item" data-index="4">5</li>
+			</ol>
+		</aside>
+
+		<section class="projects">
+			<p class="body-copy">Younhee Han. Interactive Prototyping 2. Spring 2026</p>
+			<div class="project-row" data-index="0">
+				<span class="project-num">1</span>
+				<a href="http://project1.ixp2.younheehan.com/" class="project-title">PROJECT 1: Ray</a>
+			</div>
+			<div class="project-row" data-index="1">
+				<span class="project-num">2</span>
+				<a href="http://project2.ixp2.younheehan.com/" class="project-title">PROJECT 2: Washoe</a>
+			</div>
+			<div class="project-row" data-index="2">
+				<span class="project-num">3</span>
+				<a href="http://project3.ixp2.younheehan.com/" class="project-title">PROJECT 3: Five Buttons</a>
+			</div>
+			<div class="project-row" data-index="3">
+				<span class="project-num">4</span>
+				<a href="http://project4.ixp2.younheehan.com/" class="project-title">PROJECT 4: Let's Talk</a>
+			</div>
+			<div class="project-row" data-index="4">
+				<span class="project-num">5</span>
+				<a href="http://project5.ixp2.younheehan.com/" class="project-title">PROJECT 5: Recipe-ish</a>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<p class="footer__copy">&copy; 2026 Younhee Han</p>
+	</footer>
+	<script>
+		const rows = document.querySelectorAll('.project-row');
+		const nums = document.querySelectorAll('.timeline__item');
+
+		rows.forEach(row => {
+			const i = row.dataset.index;
+			row.addEventListener('mouseenter', () => nums[i].classList.add('is-active'));
+			row.addEventListener('mouseleave', () => nums[i].classList.remove('is-active'));
+		});
+	</script>
+</body>
+</html>
